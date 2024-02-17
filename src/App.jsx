@@ -72,7 +72,7 @@ const App = () => {
         {showDetail && (
           <div className="user-details">
             <h2>User Details</h2>
-            <img className="rounded" src={profileFallback} alt="profile-img" />
+            <img className="rounded" src={profileFallback || selectedUser?.avatar} alt="profile-img" />
             <p>
               <span className="fw-bolder">Username:</span>{" "}
               {selectedUser.profile.username}

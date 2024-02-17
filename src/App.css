@@ -1,20 +1,20 @@
 #root {
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .detail-container {
-  margin: 10px;
+  /* margin: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .detail {
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   flex-direction: column;
 }
@@ -47,5 +47,13 @@
   }
   .user-details {
     max-width: 30vw;
+    padding: 20px;
+  }
+  .detail-container {
+    margin: 10px;
+    padding: 20px;
+  }
+  .detail {
+    padding: 20px;
   }
 }
