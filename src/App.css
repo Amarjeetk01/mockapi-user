@@ -46,6 +46,10 @@
   right: 10px; 
   cursor: pointer;
 }
+.list-overflow{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 
 @media (min-width: 768px) {
