@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import useFetch from "./hook/useFetchdata";
 import profileFallback from "./assets/profile-img.jpeg";
+import { AiOutlineClose } from "react-icons/ai";
 
 const App = () => {
   const { data, loading, error } = useFetch();
@@ -40,10 +41,11 @@ const App = () => {
     <div className="detail-container">
       <div className="detail gap-3">
         <ul className="list-group user-list">
-          <li className="list-group-item fs-2 fw-bolder">Users</li>
+          <div className="list-group-item fs-2 fw-bolder">Users</div>
+          <div className="list-overflow">
           {data.map((item, index) => (
             <li
-              className={`list-group-item d-flex justify-content-between align-items-center ${
+              className={`list-group-item d-flex justify-content-between align-items-center  ${
                 selectedUser === item ? "active" : ""
               }`}
               key={index}
@@ -66,11 +68,17 @@ const App = () => {
                 View
               </button>
             </li>
+            
           ))}
+          </div>
         </ul>
 
         {showDetail && (
           <div className="user-details">
+  <AiOutlineClose
+    className="close-icon"
+    onClick={handleClose}
+  />
             <h2>User Details</h2>
             <img className="rounded" src={profileFallback || selectedUser?.avatar} alt="profile-img" />
             <p>
@@ -92,13 +100,7 @@ const App = () => {
             <p>
               <span className="fw-bolder">Bio:</span> {selectedUser.Bio}
             </p>
-            <button
-              type="button"
-              className="btn btn-info"
-              onClick={handleClose}
-            >
-              Close
-            </button>
+            
           </div>
         )}
       </div>

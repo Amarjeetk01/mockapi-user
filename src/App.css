@@ -5,24 +5,22 @@
 }
 
 .detail-container {
-  /* margin: 10px; */
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  /* padding: 20px; */
 }
 
 .detail {
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
+
 }
 
 .user-list {
   max-width: 100%;
   min-width: 200px;
+
   border-radius: 5px;
+ 
 }
 
 .profile-img {
@@ -33,6 +31,7 @@
 }
 
 .user-details {
+  position: relative; 
   background-color: whitesmoke;
   height: max-content;
   padding: 20px;
@@ -41,19 +40,33 @@
   min-width: 250px;
 }
 
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  cursor: pointer;
+}
+
+
 @media (min-width: 768px) {
   .detail {
     flex-direction: row;
+    margin-left: calc(50vw - 1rem - 1.25vw - 25vw);
+
   }
   .user-details {
-    max-width: 30vw;
-    padding: 20px;
-  }
-  .detail-container {
-    margin: 10px;
+    width: 30vw;
     padding: 20px;
   }
   .detail {
-    padding: 20px;
+    padding: 2rem;
+  }
+  .user-list{
+    width:50vw;
+    
+  }
+  .list-overflow{
+    max-height: calc(100vh - 10rem );
+    overflow-y: auto;
   }
 }
